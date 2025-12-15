@@ -1,0 +1,33 @@
+<div class="register-container">
+  <div class="register-card">
+
+    <h2>Register</h2>
+
+    <p class="success" *ngIf="message()">{{ message() }}</p>
+    <p class="error" *ngIf="error()">{{ error() }}</p>
+
+    <input
+      type="email"
+      placeholder="Email"
+      [ngModel]="email()"
+      (ngModelChange)="email.set($event)" />
+
+    <br><br>
+
+    <input
+      type="password"
+      placeholder="Password"
+      [ngModel]="password()"
+      (ngModelChange)="password.set($event)" />
+
+    <br><br>
+
+    <button (click)="register()">Register</button>
+
+    <p class="link">
+      Already have an account?
+      <a routerLink="/login">Login</a>
+    </p>
+
+  </div>
+</div>
