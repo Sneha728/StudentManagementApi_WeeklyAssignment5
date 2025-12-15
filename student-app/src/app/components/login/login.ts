@@ -27,7 +27,7 @@ export class Login {
       next: (res) => {
         localStorage.setItem('token', res.token);
 
-        // ✅ Navigate to STUDENTS (not orders)
+        
         this.router.navigate(['/students']);
       },
       error: (err) => {
